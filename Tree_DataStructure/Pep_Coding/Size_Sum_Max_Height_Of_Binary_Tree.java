@@ -57,19 +57,20 @@ public class Size_Sum_Max_Height_Of_Binary_Tree {
 
     public static boolean searchNode(TreeNode root,int target)
     {
-        if(root==null)
-            return false;
+
+        if(root==null) return false;
         if(root.val==target)
         {
             return true;
         }
 
         boolean left  = searchNode(root.left,target);
-
+        if(left) return true;
         boolean right=searchNode(root.right,target);
+        if(right) return true;
 
+        return false;
 
-        return left || right;
     }
     public static void main(String[] args) {
         TreeNode root=new TreeNode(50);
@@ -92,6 +93,6 @@ public class Size_Sum_Max_Height_Of_Binary_Tree {
         System.out.println("Max Value is -------> "+ getMaxNodeVal(root));
         System.out.println("Height Of The Tree is ----> "+ getHeightOfTheTree(root));
 
-        System.out.println(searchNode(root,700)?"Element Is Present ": " Element Not Found");
+        System.out.println(searchNode(root,70)?"Element Is Present ": " Element Not Found");
     }
 }
