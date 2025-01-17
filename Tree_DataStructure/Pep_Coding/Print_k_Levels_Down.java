@@ -30,6 +30,6 @@ public class Print_k_Levels_Down {
         root.right.left.right=new TreeNode(70);
         root.right.right=new TreeNode(87);
 
-        printKLevelsDown(root,3);
+        printKLevelsDown(root,2);
     }
 }
