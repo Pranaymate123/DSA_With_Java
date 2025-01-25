@@ -4,42 +4,69 @@ import java.util.*;
 
 public class Left_View_Of_Binary_Tree {
 
+//    public  static ArrayList<Integer> leftView(TreeNode root) {
+//        // code here
+//
+//
+//        Queue<TreeNode> que=new LinkedList<>();
+//        ArrayList<Integer> result=new ArrayList<>();
+//        if(root ==null) return result;
+//
+//        que.add(root);
+//        TreeNode node=null;
+//        while (!que.isEmpty())
+//        {
+//            int size=que.size();
+//            node=que.peek();
+//            result.add(node.val);
+//
+//            while (size>0)
+//            {
+//                node = que.poll();
+//                if(node.left!=null)
+//                {
+//                    que.add(node.left);
+//                }
+//                if(node.right!=null)
+//                {
+//                    que.add(node.right);
+//                }
+//
+//                size--;
+//            }
+//        }
+//
+//        return result;
+//    }
+
+
     public  static ArrayList<Integer> leftView(TreeNode root) {
-        // code here
-        Queue<TreeNode> que=new LinkedList<>();
+        Map<Integer,TreeNode> map=new HashMap<>();
+
         ArrayList<Integer> result=new ArrayList<>();
-        que.add(root);
-        while (!que.isEmpty())
-        {
-            TreeNode node=que.peek();
-            int size=que.size();
-            node = que.poll();
-            result.add(node.val);
-            if(node.left!=null)
-            {
-                que.add(node.left);
-            }
-            if(node.right!=null)
-            {
-                que.add(node.right);
-            }
-            for(int i=1;i<size;i++)
-            {
-                TreeNode temp=que.poll();
-                if(temp.left!=null)
-                {
-                    que.add(temp.left);
-                }
-                if(temp.right!=null)
-                {
-                    que.add(temp.right);
-                }
-            }
 
-
-        }
+        solve(root,map,0,result);
 
         return result;
+    }
+
+    public static  void solve(TreeNode root,Map<Integer,TreeNode> map,int level,ArrayList<Integer> result)
+    {
+        if(root==null) return;
+        if(!map.containsKey(level))
+        {
+            map.put(level,root);
+            result.add(root.val);
+        }
+        //goto left most
+        if(root.left!=null)
+        {
+            solve(root.left,map,level+1,result);
+        }
+        if(root.right!=null)
+        {
+            solve(root.right,map,level+1,result);
+        }
     }
     public static void main(String[] args) {
 
