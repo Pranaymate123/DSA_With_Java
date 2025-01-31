@@ -1,6 +1,4 @@
-package Tree_DataStructure.Pep_Coding;
-
-import Tree_DataStructure.Pep_Coding.TreeNode;
+package Tree_DataStructure;
 
 import java.util.HashMap;
 import java.util.LinkedList;

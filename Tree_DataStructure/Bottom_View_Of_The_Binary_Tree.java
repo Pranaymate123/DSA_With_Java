@@ -1,6 +1,4 @@
-package Tree_DataStructure.Pep_Coding;
-
-import Backtracking_CodeStoryWithMik.Path_With_Maximum_Gold;
+package Tree_DataStructure;
 
 import java.util.*;
 

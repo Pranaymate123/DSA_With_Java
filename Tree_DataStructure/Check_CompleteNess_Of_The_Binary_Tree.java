@@ -1,7 +1,4 @@
-package Tree_DataStructure.Pep_Coding;
-
-import java.util.LinkedList;
-import java.util.Queue;
+package Tree_DataStructure;
 
 public class Check_CompleteNess_Of_The_Binary_Tree {
 

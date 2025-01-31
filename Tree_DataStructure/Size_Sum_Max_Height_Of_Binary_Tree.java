@@ -1,6 +1,4 @@
-package Tree_DataStructure.Pep_Coding;
-
-import Tree_DataStructure.Pep_Coding.TreeNode;
+package Tree_DataStructure;
 
 public class Size_Sum_Max_Height_Of_Binary_Tree {
 

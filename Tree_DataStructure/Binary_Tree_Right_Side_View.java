@@ -1,7 +1,5 @@
-package Tree_DataStructure.Pep_Coding;
+package Tree_DataStructure;
 
-
-import Tree_DataStructure.Pep_Coding.TreeNode;
 
 import java.util.ArrayList;
 import java.util.List;

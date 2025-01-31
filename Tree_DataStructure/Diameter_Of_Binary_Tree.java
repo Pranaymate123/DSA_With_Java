@@ -1,6 +1,4 @@
-package Tree_DataStructure.Pep_Coding;
-
-import javax.swing.*;
+package Tree_DataStructure;
 
 public class Diameter_Of_Binary_Tree {
 

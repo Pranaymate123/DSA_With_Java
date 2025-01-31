@@ -1,8 +1,4 @@
-package Tree_DataStructure.Pep_Coding;
-
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Objects;
+package Tree_DataStructure;
 
 public class LCA_Of_Binary_Tree {
 

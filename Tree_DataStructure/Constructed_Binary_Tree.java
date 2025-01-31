@@ -1,4 +1,4 @@
-package Tree_DataStructure.Pep_Coding;
+package Tree_DataStructure;
 
 public class Constructed_Binary_Tree {
     public static void main(String[] args) {
