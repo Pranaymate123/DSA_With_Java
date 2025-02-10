@@ -1,32 +1,29 @@
 package Tree_DataStructure;
-
-import javax.lang.model.util.Elements;
-
 public class Sum_Root_To_Leaf_Numbers {
 
 
-    int sum=0;
+
     public int sumNumbers(TreeNode root) {
 
         if(root==null) return 0;
-        solve(root,root.val+"");
-        return sum;
+       return solve(root,0);
+
     }
 
-    public  void solve(TreeNode root,String path)
+    public  int  solve(TreeNode root,int  sum)
     {
-        if (root==null) return;
+        if(root==null) return 0;
+        sum=sum*10 + root.val;
         if(root.left==null && root.right==null)
         {
-            sum+=Integer.parseInt(path);
-            return;
+            return  sum;
         }
 
-        if(root.left!=null)
-            solve(root.left,path+root.left.val);
+        int leftSum=solve(root.left,sum);
 
-        if(root.right!=null)
-            solve(root.right,path+root.right.val);
+        int rightSum=solve(root.right,sum);
+
+        return leftSum + rightSum;
     }
 
     public static void main(String[] args) {

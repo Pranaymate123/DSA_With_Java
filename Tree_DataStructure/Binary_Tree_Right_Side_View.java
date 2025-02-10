@@ -66,4 +66,15 @@ public class Binary_Tree_Right_Side_View {
 
 
     }
+
+    public static class Minimum_Depth_Of_Binary_Tree {
+
+        public int minDepth(TreeNode root) {
+
+        }
+
+        public static void main(String[] args) {
+
+        }
+    }
 }
