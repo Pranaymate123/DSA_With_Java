@@ -19,9 +19,9 @@ public class NQueens {
         }
         List<List<String>> res=new ArrayList<List<String>>();
         //hashing......
-        int leftRow[]=new int[n];
-        int upperDiagonal[]=new int[2*n-1];
-        int lowerDiagonal[]=new int[2*n-1];
+        int[] leftRow=new int[n];
+        int[] upperDiagonal=new int[2*n-1];
+        int[] lowerDiagonal=new int[2*n-1];
 
         solve(0,board,res,leftRow,lowerDiagonal,upperDiagonal);
         return res;
