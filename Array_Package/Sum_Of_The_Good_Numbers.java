@@ -1,10 +1,5 @@
 package Array_Package;
 
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.Map;
-import java.util.Set;
-
 public class Sum_Of_The_Good_Numbers {
 
     public static int sumOfGoodNumbers(int[] nums, int k) {
