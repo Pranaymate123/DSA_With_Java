@@ -1,26 +1,22 @@
 package Tree_DataStructure;
 
 public class LCA_Of_Binary_Tree {
-
-    public static TreeNode lowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q) {
+    public static TreeNode lowestCommonAncestor(TreeNode root, int src,int dest ) {
 
         if(root==null) return null;
-        if(root==p || root == q)
+        if(root.val == src || root.val == dest)
         {
             return root;
         }
-        TreeNode leftFind=lowestCommonAncestor(root.left,p,q);
-        TreeNode rightFind=lowestCommonAncestor(root.right,p,q);
+        TreeNode leftFind=lowestCommonAncestor(root.left,src,dest);
+        TreeNode rightFind=lowestCommonAncestor(root.right,src,dest);
 
-        if(leftFind!=null && rightFind !=null)
+        if(leftFind!=null && rightFind!=null)
         {
             return root;
         }
 
-        if(leftFind!=null) return leftFind;
-
-       return rightFind;
-
+        return leftFind!=null ? leftFind:rightFind;
     }
     public static void main(String[] args) {
 
@@ -35,6 +31,6 @@ public class LCA_Of_Binary_Tree {
         root.right.left.right=new TreeNode(70);
         root.right.right=new TreeNode(87);
 
-        System.out.println(lowestCommonAncestor(root, root.left.right.left,root.right.left.right).val);
+        System.out.println(lowestCommonAncestor(root, 30,70).val);
     }
 }
