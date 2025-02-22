@@ -1,21 +1,20 @@
 package Tree_DataStructure.BST;
 
-class  TreeNode
-{
-    int val;
-    TreeNode left;
-    TreeNode right;
+public class Replace_Sum_Of_Larger_In_BST {
 
-    public TreeNode(int val) {
-        this.val=val;
-        this.left = null;
-        this.right=null;
+    int sum=0;
+    public  void replace(TreeNode root)
+    {
+        if(root==null) return;
+
+        replace(root.right);
+        int temp=root.val;
+        root.val=sum;
+        sum+=temp;
+        replace(root.left);
+
     }
-}
-
-public class Constructed_Binary_Search_Tree {
-
-    public static void display(TreeNode root)
+    public  void display(TreeNode root)
     {
         if(root==null) return;
 
@@ -35,5 +34,10 @@ public class Constructed_Binary_Search_Tree {
         root.right.left=new TreeNode(62);
         root.right.left.right=new TreeNode(70);
         root.right.right=new TreeNode(87);
+
+        Replace_Sum_Of_Larger_In_BST obbj=new Replace_Sum_Of_Larger_In_BST();
+        obbj.replace(root);
+
+        obbj.display(root);
     }
 }
