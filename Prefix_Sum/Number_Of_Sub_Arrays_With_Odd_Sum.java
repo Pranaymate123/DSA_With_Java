@@ -28,8 +28,6 @@ public class Number_Of_Sub_Arrays_With_Odd_Sum {
 
         return result;
     }
-
-
     public static void main(String[] args) {
         Number_Of_Sub_Arrays_With_Odd_Sum obj=new Number_Of_Sub_Arrays_With_Odd_Sum();
 
