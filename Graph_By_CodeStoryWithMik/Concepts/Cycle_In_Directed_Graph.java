@@ -1,5 +1,7 @@
 package Graph_By_CodeStoryWithMik.Concepts;
 
+import Sorting.CyclicSort;
+
 import java.util.*;
 
 public class Cycle_In_Directed_Graph {
@@ -53,6 +55,7 @@ public class Cycle_In_Directed_Graph {
         Map<Integer, ArrayList<Integer>> map = new HashMap<>();
         Queue<Integer> que = new LinkedList<>();
         int V = adj.size();
+
         int[] inDegree = new int[V];
         for (int i = 0; i < V; i++) {
             map.put(i, map.get(i));
@@ -84,6 +87,16 @@ public class Cycle_In_Directed_Graph {
         }
         return count != V;
     }
+
+    public static void printHelloWorld()
+    {
+        System.out.println("HeLLO Java");
+    }
+
+    public static void main(String[] args) {
+
+    }
+
 }
 
 
