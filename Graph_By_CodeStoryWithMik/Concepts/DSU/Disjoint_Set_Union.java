@@ -1,4 +1,4 @@
-package Graph_By_CodeStoryWithMik.Concepts;
+package Graph_By_CodeStoryWithMik.Concepts.DSU;
 
 public class Disjoint_Set_Union {
 

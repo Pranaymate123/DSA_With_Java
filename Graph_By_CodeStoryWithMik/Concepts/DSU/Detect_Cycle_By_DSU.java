@@ -1,4 +1,8 @@
-package Graph_By_CodeStoryWithMik.Concepts;
+package Graph_By_CodeStoryWithMik.Concepts.DSU;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 
 public class Detect_Cycle_By_DSU {
 
@@ -35,6 +39,7 @@ public class Detect_Cycle_By_DSU {
         }
     }
 
+    // When directly edges are given
     public static boolean isCycle(int V, int[][] edges) {
            // Code here
         // Try this on every edge
@@ -66,6 +71,48 @@ public class Detect_Cycle_By_DSU {
              }
         }
         return false;
+    }
+
+
+    /// When adj given
+    public int detectCycle(int V, ArrayList<ArrayList<Integer>> lst) {
+        // Code here
+        int[] parent=new int[V];
+        int[] rank=new int[V];
+        Map<Integer,ArrayList<Integer>>  adj=new HashMap<>();
+        int i=0;
+        for(ArrayList<Integer> l:lst)
+        {
+            adj.put(i,new ArrayList<>(l));
+            parent[i]=i;
+            i++;
+        }
+
+
+        for(int u=0;u<V;u++)
+        {
+            for(Integer v:adj.getOrDefault(u,new ArrayList<>()))
+            {
+                if(u<v)
+                {
+                    int xParent=find(u,parent);
+                    int yParent=find(v,parent);
+
+                    if(xParent==yParent)
+                    {
+                        //cycle found
+                        return 1;
+                    }
+                    else
+                    {
+                        union(u,v,parent,rank);
+                    }
+                }
+            }
+        }
+
+        return 0;
+
     }
     public static void main(String[] args) {
         int V=4;
