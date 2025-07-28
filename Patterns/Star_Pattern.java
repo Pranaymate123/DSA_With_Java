@@ -279,7 +279,7 @@ public class Star_Pattern {
 //        InvertedFullPyramid(4);
 
 //        NumberPyramid(5);
-        pascalTriangle(5);
+        FullPyramidPattern(5);
 
     }
 
