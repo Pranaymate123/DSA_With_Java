@@ -1,4 +1,4 @@
-package Patterns_Based_Questions.Two_Pointers_Pattern;
+package Patterns_Based_Questions.Two_Pointers_And_Sliding_Window;
 
 public class Maximum_Average_SubArrray {
 

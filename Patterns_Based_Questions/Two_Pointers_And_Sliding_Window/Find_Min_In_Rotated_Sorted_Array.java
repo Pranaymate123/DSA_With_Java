@@ -1,6 +1,4 @@
-package Patterns_Based_Questions.Two_Pointers_Pattern;
-
-import java.util.EnumMap;
+package Patterns_Based_Questions.Two_Pointers_And_Sliding_Window;
 
 public class Find_Min_In_Rotated_Sorted_Array {
 
